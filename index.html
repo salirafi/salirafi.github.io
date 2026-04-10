@@ -25,13 +25,13 @@
                     title: "Food.com EDA",
                     repoUrl: "https://food-recipe-eda.vercel.app/",
                     imageUrl: "https://raw.githubusercontent.com/salirafi/Food-Recipe-EDA/main/figures/home_page.png",
-                    caption: "An interactive dashboard uncovering unique insights from Food.com’s recipe dataset. Explore the patterns in ingredients, nutrition, and user behavior through rich, data-driven analysis."
+                    caption: "An interactive dashboard uncovering unique insights from Food.com’s recipe dataset."
                 },
                 {
                     title: "SteamRec",
                     repoUrl: "https://steam-rec.vercel.app/",
                     imageUrl: "https://raw.githubusercontent.com/salirafi/SteamRec/main/figures/home_page.png",
-                    caption: "A recommender system for the popular game store Steam that provides personalized game recommendations based on user preferences and behavior."
+                    caption: "A recommender system for Steam that provides personalized game recommendations based on user preferences and behavior."
                 },
                 {
                     title: "HeatRisk",
@@ -49,20 +49,20 @@
 
             const visualizationImages = [
                 "static/windrose.png",
-                "static/pvalue.jpg",
+                "static/ternary.png",
+                "static/p5.png",
                 "static/p1.png",
                 "static/p2.png",
                 "static/p3.png",
                 "static/p4.png",
-                "static/p5.png",
                 "static/kp-vsys.jpg",
-                "static/ternary.png",
+                "static/pvalue.jpg",
             ];
 
             const navItems = [
                 { id: "about", label: "About Me" },
                 { id: "education", label: "Education & Experience" },
-                { id: "projects", label: "Projects" },
+                { id: "projects", label: "Skills & Projects" },
                 { id: "publications", label: "Publications & Conferences" },
                 { id: "misc", label: "Misc" }
             ];
@@ -83,9 +83,10 @@
                                     high-noise astronomical observational datasets which spanned the full ETL and analytical pipeline. 
                                     Beyond research, my personal projects include various data-driven builds and analyses, covered in <a href="#" onClick={(e) => { e.preventDefault(); setActiveView("projects"); }}>Projects</a>.
                                     I am technically proficient in {" "}
-                                    <span className="inline-tech-item"><img src="static/python.svg" alt="Python icon" className="inline-tech-icon" />Python</span> and {" "}
-                                    <span className="inline-tech-item"><img src="static/r.svg" alt="R icon" className="inline-tech-icon" />R</span> for data analysis, statistical modeling, and visualization, 
-                                    with working knowledge of {" "}<span className="inline-tech-item"><img src="static/sql.svg" alt="SQL icon" className="inline-tech-icon" />SQL</span> and 
+                                    <span className="inline-tech-item"><img src="static/python.svg" alt="Python icon" className="inline-tech-icon" />Python</span> and 
+                                    {" "}<span className="inline-tech-item"><img src="static/sql.svg" alt="SQL icon" className="inline-tech-icon" />SQL</span> for 
+                                    data analysis, statistical modeling, and visualization, with working knowledge of {" "}
+                                    <span className="inline-tech-item"><img src="static/r.svg" alt="R icon" className="inline-tech-icon" />R</span> and 
                                     machine learning frameworks using {" "}<span className="inline-tech-item"><img src="static/jax.svg" alt="JAX icon" className="inline-tech-icon" />JAX</span> and 
                                     {" "}<span className="inline-tech-item"><img src="static/tensorflow.svg" alt="TensorFlow icon" className="inline-tech-icon" />TensorFlow</span>. 
                                 </p>
@@ -103,46 +104,6 @@
                                 </p>
                             </section>
 
-                            <section className="content-section">
-                                <p className="section-label">Skills</p>
-                                <h3>Core strengths and tools</h3>
-                                <div className="skill-list">
-                                    <span>Data Analysis</span>
-                                    <span>Machine Learning</span>
-                                    <span>Data Visualization</span>
-                                    <span>Statistical Thinking</span>
-                                    <span>Research Communication</span>
-                                </div>
-                                <p>
-                                    Programming languages (proficient → working knowledge): 
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/python.svg" alt="Python icon" className="inline-tech-icon" />Python</span>,
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/r.svg" alt="R icon" className="inline-tech-icon" />R</span>,
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/sql.svg" alt="SQL icon" className="inline-tech-icon" />SQL</span>,
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/git.svg" alt="Git icon" className="inline-tech-icon" />Git</span>,
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/html.svg" alt="HTML icon" className="inline-tech-icon" />HTML</span>,
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/js.svg" alt="JavaScript icon" className="inline-tech-icon" />JavaScript</span>
-                                </p>
-                                <p>
-                                    Visualization tools: 
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/Matplotlib.svg" alt="Matplotlib icon" className="inline-tech-icon" />Matplotlib</span>,
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/plotly.svg" alt="Plotly icon" className="inline-tech-icon" />Plotly</span>,
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/powerpoint.svg" alt="PowerPoint icon" className="inline-tech-icon" />PowerPoint</span>,
-                                    {" "}
-                                    <span className="inline-tech-item"><img src="static/tableau.svg" alt="Tableau icon" className="inline-tech-icon" />Tableau</span> (basic knowlegde)
-                                </p>
-                                <p>
-                                    Languages: Indonesian (native), English (fluent, TOEFL iBT 104), Japanese (basic)
-                                </p>
-                            </section>
                         </div>
                     );
                 }
@@ -239,22 +200,67 @@
 
                 if (activeView === "projects") {
                     return (
+                        
                         <section className="section-stack">
+
                             <section className="content-section">
-                                <p className="section-label">Projects</p>
-                                <h2>Personal Projects</h2>
+                                <h3 className="section-label">Skills</h3>
+                                <div className="skill-list">
+                                    <span>Data Analysis</span>
+                                    <span>Machine Learning</span>
+                                    <span>Data Visualization</span>
+                                    <span>Statistical Thinking</span>
+                                    <span>Research Communication</span>
+                                </div>
                                 <p>
-                                    Some of my work is captured in the projects I build for fun, which are data-driven in nature.
-                                    These projects are a space for me to apply my skills to topics that interest me, and to experiment with new tools and techniques. 
-                                    
+                                    Programming languages (proficient → working knowledge): 
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/python.svg" alt="Python icon" className="inline-tech-icon" />Python</span>,
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/sql.svg" alt="SQL icon" className="inline-tech-icon" />SQL</span>,
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/r.svg" alt="R icon" className="inline-tech-icon" />R</span>,
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/git.svg" alt="Git icon" className="inline-tech-icon" />Git</span>,
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/html.svg" alt="HTML icon" className="inline-tech-icon" />HTML</span>,
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/js.svg" alt="JavaScript icon" className="inline-tech-icon" />JavaScript</span>
                                 </p>
+                                <p>
+                                    Visualization tools: 
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/Matplotlib.svg" alt="Matplotlib icon" className="inline-tech-icon" />Matplotlib</span>,
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/plotly.svg" alt="Plotly icon" className="inline-tech-icon" />Plotly</span>,
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/powerpoint.svg" alt="PowerPoint icon" className="inline-tech-icon" />PowerPoint</span>,
+                                    {" "}
+                                    <span className="inline-tech-item"><img src="static/tableau.svg" alt="Tableau icon" className="inline-tech-icon" />Tableau</span> (basic knowlegde)
+                                </p>
+                                <p>
+                                    Languages: Indonesian (native), English (fluent, TOEFL iBT 104), Japanese (basic)
+                                </p>
+                            </section>
+
+                            
+                            <section className="content-section projects">
+                                <h3 className="section-label">Personal Projects</h3>
+                                <p>These are data-driven projects I build for fun. Click on the image to go the web app.</p>
                             </section>
 
                             <div className="projects-grid">
                                 {projectItems.map((project) => ( 
                                     project.title === "More on the progress!" ? (
                                         <div className="project-title">
-                                            <h3>{project.title}</h3>
+                                            <h3>
+                                                {project.title} See 
+                                                my <img src="static/github.svg" alt="GitHub icon" className="inline-tech-icon" /> {""} 
+                                                <a href="https://github.com/salirafi" target="_blank" rel="noreferrer">
+                                                    Github
+                                                </a> for 
+                                                updates.
+                                            </h3>
                                         </div>
                                     ) : (
                                     <a
@@ -273,18 +279,20 @@
                                 )))}
                             </div>
 
-                            <h2> My DataViz Examples </h2>
+                            <section className="content-section projects">
+                                <h3 className="section-label">My DataViz Examples</h3>
+                                <div className="viz-collage" aria-label="Data visualization examples">
+                                    {visualizationImages.map((imageUrl, index) => (
+                                        <img
+                                            key={`${imageUrl}-${index}`}
+                                            src={imageUrl}
+                                            alt=""
+                                            loading="lazy"
+                                        />
+                                    ))}
+                                </div>
+                            </section>
 
-                            <div className="viz-collage" aria-label="Data visualization examples">
-                                {visualizationImages.map((imageUrl, index) => (
-                                    <img
-                                        key={`${imageUrl}-${index}`}
-                                        src={imageUrl}
-                                        alt=""
-                                        loading="lazy"
-                                    />
-                                ))}
-                            </div>
                         </section>
                     );
                 }
@@ -356,7 +364,7 @@
 
                 return (
                     <section className="section-stack">
-                        <section className="content-section">
+                        <section className="content-section misc">
                             <p className="section-label">Miscellaneous</p>
                             <h3>Beyond formal work</h3>
                             <p>
@@ -366,6 +374,10 @@
                                 I also enjoy cooking and baking. While I wouldn’t call myself particularly skilled 🙂, I find it a rewarding way to relax and unwind after a long day.
                             </p>
                         </section>
+
+                        <div className="sakura-wrap">
+                            <img src="static/sakura.jpg" alt="Sakura" className="sakura"/>
+                        </div>
                     </section>
                 );
             }

@@ -266,6 +266,16 @@ button {
     padding: 0 0 24px;
     border-bottom: 1px solid var(--line);
 }
+/* for personal projects section */
+.projects{
+    padding: 0;
+    border-bottom: 0px solid var(--line);
+}
+/* for misc section */
+.misc{
+    padding: 0;
+    border-bottom: 0px solid var(--line);
+}
 
 .content-section:last-child {
     border-bottom: 0;
@@ -372,11 +382,16 @@ button {
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 22px;
+    gap: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--line);
+}
+.projects-grid p {
+    font-size: 15px;
 }
 
 .project-tile {
-    width: min(100%, 320px);
+    width: min(100%, 300px);
     text-decoration: none;
 }
 
@@ -421,6 +436,21 @@ button {
     width: 100%;
     height: 190px;
     object-fit: contain;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.sakura-wrap {
+    margin-top: 0;
+    height: 100vh;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    justify-content: center;
+}
+
+.sakura {
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     box-shadow: var(--shadow);
 }
